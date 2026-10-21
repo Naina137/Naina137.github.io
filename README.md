@@ -60,7 +60,7 @@ My personal portfolio is built with plain **HTML and CSS** and hosted on **GitHu
 ## Let's Connect
 
 - LinkedIn: [naina-kumari-06373132b](https://www.linkedin.com/in/naina-kumari-06373132b)
-- GitHub: [Naina137](https://github.com/Naina137)
+- GitHub: [Naina137](https://github.com/Naina137?tab=repositories)
 - Email: nainaguptaias407@gmail.com
 
 ---
