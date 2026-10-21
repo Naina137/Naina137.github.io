@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Naina Kumari | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7ff;--ink:#1b1230;--muted:#6b5f82;--card:#ffffff;--line:#e6dcf7;
+  --purple:#6a0dad;--teal:#00b8b8;--pink:#ff4d94;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0e0a1a;--ink:#f3eeff;--muted:#b3a6cc;--card:#181226;--line:#2e2347;--purple:#a65cf0;--teal:#2de2e2;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0e0a1a;--ink:#f3eeff;--muted:#b3a6cc;--card:#181226;--line:#2e2347;--purple:#a65cf0;--teal:#2de2e2;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));height:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:'Syne',system-ui,sans-serif;margin:0;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem}
+.logo i{font-style:normal;color:var(--pink)}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav li a{display:block;padding:6px 12px;border-radius:99px;text-decoration:none;font-size:.88rem;font-weight:500;color:var(--muted);white-space:nowrap;transition:.2s}
+nav li a:hover{background:var(--pink);color:#fff}
+
+/* hero */
+.hero{position:relative;padding:72px 0 56px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;z-index:-1}
+.hero::before{width:300px;height:300px;background:var(--purple);top:-40px;right:-60px}
+.hero::after{width:260px;height:260px;background:var(--teal);bottom:0;left:-80px}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:99px;font-size:.85rem;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 25%,transparent)}
+.hero h1{font-size:clamp(3rem,14vw,7.5rem);font-weight:800;letter-spacing:-.03em;margin:20px 0 10px}
+.hero h1 span{background:linear-gradient(90deg,var(--purple),var(--pink) 55%,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(1.2rem,4vw,1.8rem);min-height:1.4em}
+.role b{color:var(--pink);transition:opacity .3s}
+.role b.out{opacity:0}
+.sub{max-width:540px;color:var(--muted);font-size:1.05rem;margin:14px 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{padding:13px 26px;border-radius:99px;font-weight:700;text-decoration:none;font-size:.95rem;border:2px solid var(--pink);transition:.25s}
+.btn.fill{background:var(--pink);color:#fff}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.caps{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.caps span{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--purple);background:var(--card);border:1px dashed var(--line);padding:2px 14px;border-radius:12px}
+
+/* sections */
+section{padding:56px 0}
+.label{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:8px}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px}
+.about p{color:var(--muted);font-size:1.08rem;margin:0}
+.about p strong{color:var(--ink)}
+
+/* two sides */
+.sides{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:760px){.sides{grid-template-columns:1fr 1fr}}
+.side h3{font-size:1.5rem;margin-bottom:4px}
+.side .tg{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+.side.logic{border-top:6px solid var(--teal)}
+.side.art{border-top:6px solid var(--pink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:7px 14px;border-radius:99px;font-size:.88rem;font-weight:500;background:var(--bg);border:1px solid var(--line);transition:.2s}
+.logic .chips span:hover{background:var(--teal);color:#06242a;transform:translateY(-2px)}
+.art .chips span:hover{background:var(--pink);color:#fff;transform:translateY(-2px)}
+
+/* projects */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.proj{position:relative;overflow:hidden;transition:transform .25s}
+.proj:hover{transform:translateY(-6px)}
+.proj .n{font-family:'Syne',sans-serif;font-weight:800;font-size:3.5rem;line-height:1;background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.proj h3{font-size:1.35rem;margin:10px 0 8px}
+.proj p{color:var(--muted);margin:0 0 16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--purple) 14%,transparent);color:var(--purple)}
+
+/* creative */
+.lyrics{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.lyric{font-family:'Caveat',cursive;font-size:1.7rem;line-height:1.25;padding:28px;border-radius:24px;color:#fff;position:relative}
+.lyric:nth-child(1){background:linear-gradient(135deg,var(--purple),var(--pink))}
+.lyric:nth-child(2){background:linear-gradient(135deg,#0a8f9c,var(--purple))}
+.lyric:nth-child(3){background:linear-gradient(135deg,var(--pink),#d46a00)}
+.lyric::before{content:"“";position:absolute;top:-6px;left:14px;font-size:5rem;opacity:.3;font-family:'Syne',sans-serif}
+
+/* german strip */
+.strip{background:linear-gradient(90deg,var(--purple),var(--pink),var(--teal));color:#fff;text-align:center;padding:36px 20px}
+.strip p{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,5vw,2.4rem);margin:0}
+.strip small{display:block;font-family:'DM Sans',sans-serif;font-weight:400;font-size:.9rem;opacity:.9;margin-top:6px}
+
+/* contact */
+.links{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.link{display:block;text-decoration:none;transition:.25s}
+.link:hover{transform:translateY(-4px);border-color:var(--pink)}
+.link small{display:block;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.link b{font-family:'Syne',sans-serif;font-size:1.05rem;word-break:break-word}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:36px 20px 24px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Naina<i>.</i>K</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#sides">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#creative">Creative</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="kicker"><i class="dot"></i> Hi, I’m</span>
+    <h1><span>Naina<br>Kumari</span></h1>
+    <div class="role">I’m a <b id="role">Data Scientist</b></div>
+    <p class="sub">Where code meets creativity. I blend logic with art to build things that are smart, bold and a little bit magical.</p>
+    <div class="btns">
+      <a class="btn fill" href="#projects">View my projects</a>
+      <a class="btn" href="#contact">Let’s talk</a>
+    </div>
+    <div class="caps"><span>Zart, aber stark.</span><span>Mein Weg, meine Magie.</span></div>
+  </div>
+
+  <section id="about"><div class="wrap rv">
+    <div class="label">About me</div>
+    <h2>Logic with a little poetry.</h2>
+    <div class="card about"><p>I’m a <strong>5th semester Data Science student</strong> at AMC Engineering College, VTU. I explore <strong>cybersecurity through CTFs</strong>, decode personalities through <strong>graphology</strong>, and express myself through <strong>rap, poetry and storytelling</strong>. My goal is to merge logic with art and build impactful solutions.</p></div>
+  </div></section>
+
+  <section id="sides"><div class="wrap rv">
+    <div class="label">Skills</div>
+    <h2>Two sides, one mind.</h2>
+    <div class="sides">
+      <div class="card side logic">
+        <h3>The Logic Side</h3><div class="tg">Data, security and building</div>
+        <div class="chips"><span>Python</span><span>SQL</span><span>Data Visualization</span><span>Cybersecurity Basics</span><span>HTML &amp; CSS</span><span>React</span><span>Flutter</span></div>
+      </div>
+      <div class="card side art">
+        <h3>The Art Side</h3><div class="tg">Words, rhythm and people</div>
+        <div class="chips"><span>Creative Writing</span><span>Rap</span><span>Poetry</span><span>Graphology</span><span>Numerology</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="wrap rv">
+    <div class="label">Projects</div>
+    <h2>Things I’ve built.</h2>
+    <div class="grid">
+      <article class="card proj"><div class="n">01</div><h3>Sarvajaneeya</h3><p>One of my projects. Full details coming soon.</p><div class="tags"><span>Project</span></div></article>
+      <article class="card proj"><div class="n">02</div><h3>Wine Prediction</h3><p>A prediction project built on wine data.</p><div class="tags"><span>Data Science</span><span>Prediction</span></div></article>
+      <article class="card proj"><div class="n">03</div><h3>Customer Analysis</h3><p>Analysis of customer data to find patterns and insights.</p><div class="tags"><span>Data Science</span><span>Analysis</span></div></article>
+    </div>
+  </div></section>
+
+  <section id="creative"><div class="wrap rv">
+    <div class="label">My mindset</div>
+    <h2>Still building.</h2>
+    <div class="lyrics">
+      <div class="lyric">Started with a blank file. Still here, still building.</div>
+      <div class="lyric">Not perfect yet, but better than yesterday.</div>
+      <div class="lyric">Every project teaches me something. Every mistake counts too.</div>
+    </div>
+  </div></section>
+
+  <div class="strip rv"><p>„Ich greife nach den Sternen.“</p><small>I reach for the stars.</small></div>
+
+  <section id="contact"><div class="wrap rv">
+    <div class="label">Contact</div>
+    <h2>Let’s build something.</h2>
+    <div class="links">
+      <a class="card link" href="mailto:nainaguptaias407@gmail.com"><small>Email</small><b>nainaguptaias407@gmail.com</b></a>
+      <a class="card link" href="https://www.linkedin.com/in/naina-kumari-06373132b"><small>LinkedIn</small><b>linkedin.com/in/naina-kumari-06373132b</b></a>
+      <a class="card link" href="https://github.com/Naina137"><small>GitHub</small><b>github.com/Naina137</b></a>
+    </div>
+  </div></section>
+</main>
+
+<footer>© 2026 · Designed by Naina Kumari</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var roles=['Data Scientist','Cybersecurity Explorer','Full Stack Learner','Rapper','Writer'],i=0,el=document.getElementById('role');
+  setInterval(function(){el.classList.add('out');setTimeout(function(){i=(i+1)%roles.length;el.textContent=roles[i];el.classList.remove('out')},300)},2200);
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    items.forEach(function(n){io.observe(n)});
+  }else{items.forEach(function(n){n.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
